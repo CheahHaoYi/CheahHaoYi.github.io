@@ -5,7 +5,7 @@ const title = 'Education';
 
 const items: Array<Education> = [
 	{
-		degree: 'Bachelor degree of Computer Science',
+		degree: 'Bachelor of Engineering, Computer Engineering',
 		description: '',
 		location: 'Tunisia',
 		logo: Assets.Unknown,
@@ -17,9 +17,9 @@ const items: Array<Education> = [
 		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
 	},
 	{
-		degree: 'PhD of Computer Science',
+		degree: 'Exchange Programme',
 		description: '',
-		location: 'USA',
+		location: 'Denmark',
 		logo: Assets.Unknown,
 		name: '',
 		organization: 'MIT',
