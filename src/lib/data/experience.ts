@@ -7,49 +7,34 @@ const title = 'Experience';
 const items: Array<Experience> = [
 	{
 		slug: 'open-sourcer',
-		company: 'Self-employed',
+		company: 'Espressif Systems (Czechia) s.r.o.',
 		description: 'Creating awesome tools for developers.',
-		contract: ContractType.SelfEmployed,
+		contract: ContractType.Internship,
 		type: 'Software Development',
-		location: 'Home',
+		location: 'Brno, Czechia',
 		period: { from: new Date() },
-		skills: getSkills('ts', 'js'),
-		name: 'Open Source Developer',
+		skills: getSkills('C', 'Cpp', 'python', 'esp-idf'),
+		name: 'Software Engineer (Intern)',
 		color: 'red',
 		links: [],
-		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome tools for developers.'
+		logo: Assets.ESP,
+		shortDescription: 'Board Support Package (BSP) Developer'
 	},
 	{
 		slug: 'software-freelance',
-		company: 'Self-employed',
+		company: 'Espressif Systems (Singapore) Pte. Ltd.',
 		description: 'Creating awesome applications for customers.',
-		contract: ContractType.Freelance,
+		contract: ContractType.Internship,
 		type: 'Software Development',
-		location: 'Home',
+		location: 'One North, Singapore',
 		period: { from: new Date() },
-		skills: getSkills('svelte', 'ts', 'sass', 'css', 'html', 'js'),
-		name: 'Freelancer',
-		color: 'blue',
+		skills: getSkills('C', 'Cpp', 'python', 'esp-idf'),
+		name: 'Software Engineer (Intern)',
+		color: 'red',
 		links: [],
-		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome applications for customers.'
+		logo: Assets.ESP,
+		shortDescription: 'ESP-IDF Developer'
 	},
-	{
-		slug: 'software-freelance-junior',
-		company: 'Self-employed',
-		description: 'Creating awesome applications for customers.',
-		contract: ContractType.Freelance,
-		type: 'Software Development',
-		location: 'Home',
-		period: { from: new Date(2022, 0, 1), to: new Date() },
-		skills: getSkills('css', 'html', 'js'),
-		name: 'Junior Freelancer',
-		color: 'green',
-		links: [],
-		logo: Assets.Unknown,
-		shortDescription: 'Creating awesome applications for customers.'
-	}
 ];
 
 const ExperienceData = { title, items };

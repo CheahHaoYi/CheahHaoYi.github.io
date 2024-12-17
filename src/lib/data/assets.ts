@@ -71,8 +71,10 @@ const Assets = {
 	Ruvy: asset('ruvy.svg'),
 	Postcss: asset('postcss.svg'),
 	NUS: asset('nus.jpg'),
-	DTU: asset('dtu.png'),
+	DTU: asset('DTU.jpg'),
 	ESP: asset('esp.svg'),
+	RISCV: asset('risc_v.webp'),
+	Verilog: asset('verilog.png'),
 };
 
 export default Assets;
