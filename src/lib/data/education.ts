@@ -6,27 +6,27 @@ const title = 'Education';
 const items: Array<Education> = [
 	{
 		degree: 'Bachelor of Engineering, Computer Engineering',
-		description: '',
-		location: 'Tunisia',
-		logo: Assets.Unknown,
-		name: '',
-		organization: 'ISTIC',
-		period: { from: new Date(2020, 0, 1), to: new Date(2022, 5, 1) },
-		shortDescription: '',
-		slug: 'dummy-education-item',
-		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
+		description: 'Second Major in Management, Specialization in IoT and Robotics',
+		location: 'Singapore',
+		logo: Assets.NUS,
+		name: 'National University of Singapore',
+		organization: 'NUS',
+		period: { from: new Date(2020, 8, 1), to: new Date(2025, 5, 1) },
+		shortDescription: 'Bachelor Degree',
+		slug: 'National University of Singapore',
+		subjects: ['ALgorithm', 'C/C++', 'Python', 'Java', 'Verilog', 'Assembly']
 	},
 	{
 		degree: 'Exchange Programme',
-		description: '',
+		description: 'Spring Semester',
 		location: 'Denmark',
-		logo: Assets.Unknown,
-		name: '',
-		organization: 'MIT',
-		period: { from: new Date(2023, 0, 1) },
-		shortDescription: '',
-		slug: 'dummy-education-item-2',
-		subjects: ['Assembly', 'Rust', 'Computer Architecture', 'Algorithms and Data structures']
+		logo: Assets.DTU,
+		name: 'Techical University of Denmark',
+		organization: 'DTU',
+		period: { from: new Date(2024, 0, 1), to: new Date(2024, 5, 1) },
+		shortDescription: 'Semester long exchange programme',
+		slug: 'Danmarks Tekniske Universitet',
+		subjects: ['Reinforcement Learning', 'VLSI', 'Sustainable Economics']
 	}
 ];
 

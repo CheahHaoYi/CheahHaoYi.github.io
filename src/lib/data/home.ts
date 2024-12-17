@@ -11,7 +11,7 @@ const hero: {
 } = {
 	title: `${BaseData.fullName},`,
 	description:
-		'lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+		'Computer Engineering student with a passion for software development, machine learning, and robotics. Always eager to learn and explore new technologies!',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/CheahHaoYi', icon: 'i-carbon-logo-github' },
 		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/cheahhaoyi/', icon: 'i-carbon-logo-linkedin' },
