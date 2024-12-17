@@ -21,7 +21,7 @@ const items: Array<Project> = [
 			from: new Date(2024, 12, 10)
 		},
 		skills: getSkills('svelte', 'ts', 'html', 'css'),
-		type: 'Website Template'
+		type: 'Web Development'
 	},
 	{
 		slug: 'CPU Design',
@@ -30,7 +30,7 @@ const items: Array<Project> = [
 			'Implementation of a RISC-V processor supporting 32 bit instructions. \
 			The processor is implemented in Verilog and tested on an FPGA board. \
 			The processor supports a subset of the RISC-V ISA and is capable of running simple programs. \
-			My project cannot be released publicly due to academic integrity reasons.',
+			The source code cannot be released publicly due to academic integrity reasons.',
 		shortDescription:
 			'Implementation of a RISC-V processor supporting 32 bit instructions.',
 		links: [{ to: 'https://github.com/NUS-CG3207/labs', label: 'Skeleton Code' }],
@@ -39,8 +39,8 @@ const items: Array<Project> = [
 		period: {
 			from: new Date(2024, 8, 1), to: new Date(2024, 11, 30)
 		},
-		skills: getSkills('verilog', 'riscv', 'python'),
-		type: 'Website Template',
+		skills: getSkills('verilog', 'python'),
+		type: 'CPU Architecture',
 	}
 ];
 

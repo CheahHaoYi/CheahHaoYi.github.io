@@ -75,6 +75,10 @@ const Assets = {
 	ESP: asset('esp.svg'),
 	RISCV: asset('risc_v.webp'),
 	Verilog: asset('verilog.png'),
+	RVRC: asset('rvrc.jpeg'),
+	Matplotlib: asset('matplotlib.png'),
+	Scikitlearn: asset('scikitlearn.png'),
+	Pytorch: asset('pytorch.png'),
 };
 
 export default Assets;

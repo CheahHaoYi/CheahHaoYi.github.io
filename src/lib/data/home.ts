@@ -11,7 +11,7 @@ const hero: {
 } = {
 	title: `${BaseData.fullName},`,
 	description:
-		'Computer Engineering student with a passion for software development, machine learning, and robotics. Always eager to learn and explore new technologies!',
+		'Software Developer with experience in Web Development, Embedded Systems, and Software Engineering. Currently pursuing a Bachelor of Engineering in Computer Engineering at the National University of Singapore.',
 	links: [
 		{ label: 'GitHub', href: 'https://github.com/CheahHaoYi', icon: 'i-carbon-logo-github' },
 		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/cheahhaoyi/', icon: 'i-carbon-logo-linkedin' },

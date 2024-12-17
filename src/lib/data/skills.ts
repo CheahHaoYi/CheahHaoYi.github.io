@@ -116,8 +116,8 @@ const items = [
 		description:
 			'Low-level programming language. Mainly used for Embedded systems development',
 		logo: Assets.C,
-		name: 'C Language',
-		category: 'pro-lang' // 'pro-lang' 'library' 'markup-style'
+		name: 'C',
+		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'Cpp',
@@ -125,8 +125,8 @@ const items = [
 		description:
 			'Low-level programming language with Object Oriented Programming. Mainly used for Embedded systems development',
 		logo: Assets.Cpp,
-		name: 'C++ Language',
-		category: 'pro-lang' // 'pro-lang' 'library' 'markup-style'
+		name: 'C++',
+		category: 'pro-lang' 
 	}),
 	defineSkill({
 		slug: 'python',
@@ -135,7 +135,16 @@ const items = [
 			'High Level language. Used for Numeric Analysis, Machine Learning, Scripting and Visualizations',
 		logo: Assets.Python,
 		name: 'Python',
-		category: 'pro-lang' // 'pro-lang' 'library' 'markup-style'
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'verilog',
+		color: 'blue',
+		description:
+			'Hardware Description Language. Used for Digital Circuit Design and FPGA programming',
+		logo: Assets.Verilog,
+		name: 'Verilog',
+		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'css',
@@ -156,13 +165,49 @@ const items = [
 		category: 'markup-style'
 	}),
 	defineSkill({
+		slug: 'Numpy',
+		color: 'blue',
+		description:
+			'Used for Numerical Analysis, Scientific Computing, Machine Learning and Data Analysis',
+		logo: Assets.Numpy,
+		name: 'Numpy',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'Matplotlib',
+		color: 'blue',
+		description:
+			'Used for Data Visualization, Plotting and Graphing',
+		logo: Assets.Matplotlib,
+		name: 'Matplotlib',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'Sklearn',
+		color: 'orange',
+		description:
+			'Used for numerical Machine Learning',
+		logo: Assets.Scikitlearn,
+		name: 'Scikit Learn',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'Pytorch',
+		color: 'orange',
+		description:
+			'Build and train neural networks',
+		logo: Assets.Pytorch,
+		name: 'Pytorch',
+		category: 'library'
+	}),
+	defineSkill({
 		slug: 'esp-idf',
 		color: 'red',
 		description:
 			'Espressif IoT Development Framework (ESP-IDF) is the official development framework using C/C++',
 		logo: Assets.ESP,
-		name: 'ESP IoT Development Framework',
-		category: 'library'
+		name: 'ESP-IDF',
+		category: 'framework'
 	}),
 	defineSkill({
 		slug: 'svelte',
@@ -170,7 +215,7 @@ const items = [
 		description: svelteMd,
 		logo: Assets.Svelte,
 		name: 'Svelte',
-		category: 'library'
+		category: 'framework'
 	})
 ] as const;
 
