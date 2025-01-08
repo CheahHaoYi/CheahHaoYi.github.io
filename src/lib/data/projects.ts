@@ -1,6 +1,7 @@
 import Assets from './assets';
 import { getSkills } from './skills';
 import type { Project } from './types';
+import projPortfolioMd from './md_project/Portfolio_Style_Analysis.md?raw';
 
 const items: Array<Project> = [
 	{
@@ -41,6 +42,21 @@ const items: Array<Project> = [
 		},
 		skills: getSkills('verilog', 'python'),
 		type: 'CPU Architecture',
+	},
+	{
+		slug: 'Portfolio Style Analysis',
+		color: '#a16125',
+		description: projPortfolioMd,
+		shortDescription:
+			'Implementation of Sharpe Returns Based Style Analysis in Python using Data from Yahoo Finance',
+		links: [{ to: 'https://cheahhaoyi.github.io', label: 'NULL' }],
+		logo: Assets.Python,
+		name: 'Portfolio Style Analysis',
+		period: {
+			from: new Date(2024, 8, 1), to: new Date(2024, 11, 30)
+		},
+		skills: getSkills('matplotlib', 'python', 'Numpy'),
+		type: 'Finance',
 	}
 ];
 
