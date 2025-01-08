@@ -1,31 +1,31 @@
 # Portfolio Style Analysis
 
-## Introduction
+### Introduction
 Style Analysis was introduced by Nobel Laureate William Sharpe as a tool to systematically measure the exposures of managed portfolio.
 
 The main idea was to regress fund returns on indexes representing a range of asset classes (T-bill, Small/Medium/Large Cap, Low P/E (Value Stock), High P/E (Growth Stock) etc.). The regression coefficient on each index would then measure the fund's implicit allocation to that "style"
 
 As funds are barred from short positions, the regression coefficients will be non-negative and add up to 100% to represent a complete asset allocation.
 
-## Intepretation
+### Intepretation
 The **R-square** of the regression measures the percentage of return variability attributable to the style choice rather than security selection.
 
 The **intercept** measures the average return from security selection of the fund portfolio. In other words, it tracks the average success of security selection over the sample period.
 
-## Implementation
+### Implementation
 In this project, we will be using the following python libraries to do the Returns-Based Style Anlaysis:
 - [**yfinance**](https://aroussi.com/post/python-yahoo-finance) : Open-source tool to fetch financial and market data from [Yahoo Finance](https://finance.yahoo.com/).
 - [**pandas**](https://pandas.pydata.org/) : Popular data analysis and manipulation tool
 - [**matplotlib**](https://matplotlib.org/) and [**seaborn**](https://seaborn.pydata.org/): Creating attractive visualization of the style analysis
 - [**scipy**](https://scipy.org/) : Sciencific computing and optimization algorithm
 
-## Reference:
+### Reference:
 - William F. Sharpe, “Asset Allocation: Management Style and Performance Evaluation" Journal of Portfolio Management, Winter 1992, pp. 7-19.
 - Gary Brinson, Brian Singer, and Gilbert Beebower, “Determinants of Portfolio Performance,” Financial Analysts Journal, May/June 1991.
 - Bodie, Zvi, Alex Kane and Alan Marcus, 2021, Investments (12th Edition), McGraw Hill, ISBN 978-1-260-
 59024-1
 
-## Installation
+### Installation
 
 We will first install the libraries needed for the style analysis.
 
@@ -88,7 +88,7 @@ import seaborn as sns
     Successfully installed html5lib-1.1 lxml-5.3.0 multitasking-0.0.11 peewee-3.17.8 yfinance-0.2.51
 
 
-## Project Parameters
+### Project Parameters
 
 The parameters of the style analysis are defined as shown:
 - `start_date` : Starting period of the style anlaysis
@@ -125,7 +125,7 @@ style_analysis_start_date = '202205'
 window_size = 36 # 3 years window
 ```
 
-## Risk Free Return
+### Risk Free Return
 
 The market risk free rate is an important variable when doing any financial analysis.
 
@@ -400,7 +400,7 @@ display(fama_french.head(), fama_french.tail())
 </div>
 
 
-## Calculate monthly return of funds and portfolio
+### Calculate monthly return of funds and portfolio
 
 
 
@@ -604,7 +604,7 @@ display(monthly_return_table.head(), monthly_return_table.tail())
 </div>
 
 
-## Calculate monthly excess return of fund and portfolio
+### Calculate monthly excess return of fund and portfolio
 
 
 ```python
@@ -782,7 +782,7 @@ display(monthly_excess_return_table.head(), monthly_excess_return_table.tail())
 </div>
 
 
-## Calculate regression coefficient
+### Calculate regression coefficient
 
 
 ```python
@@ -1026,7 +1026,7 @@ display(weight_table.head(), weight_table.tail())
 </div>
 
 
-## Weight Analysis
+### Weight Analysis
 
 
 ```python
@@ -1240,7 +1240,7 @@ display(r_square_table)
 
 
 
-## Visualize Style Analysis
+### Visualize Style Analysis
 
 
 
@@ -1264,6 +1264,6 @@ plt.show()
 
 
     
-![png](src/lib/data/md_project/Portfolio_Style_Analysis_files/Portfolio_Style_Analysis_19_0.png)
+![png](../src/lib/data/md_project/Portfolio_Style_Analysis_files/Portfolio_Style_Analysis_19_0.png)
     
 
