@@ -1264,6 +1264,5 @@ plt.show()
 
 
     
-![png](../src/lib/data/md_project/Portfolio_Style_Analysis_files/Portfolio_Style_Analysis_19_0.png)
-    
+![Style Analysis Graph](https://github.com/CheahHaoYi/CheahHaoYi.github.io/blob/main/src/lib/data/md_project/Portfolio_Style_Analysis_files/Portfolio_Style_Analysis_19_0.png?raw=true)    
 
