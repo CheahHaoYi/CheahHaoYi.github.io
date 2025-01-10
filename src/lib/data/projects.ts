@@ -26,7 +26,7 @@ const items: Array<Project> = [
 		type: 'Web Development'
 	},
 	{
-		slug: 'CPU Design',
+		slug: 'riscv-cpu-design',
 		color: '#0047ab',
 		description:
 			'Implementation of a RISC-V processor supporting 32 bit instructions. \
@@ -45,7 +45,7 @@ const items: Array<Project> = [
 		type: 'CPU Architecture',
 	},
 	{
-		slug: 'Portfolio Style Analysis',
+		slug: 'portfolio-style-analysis',
 		color: '#a16125',
 		description: projPortfolioMd,
 		shortDescription:
@@ -73,7 +73,26 @@ const items: Array<Project> = [
 		},
 		skills: getSkills('matplotlib', 'python', 'numpy', 'pandas', 'sklearn'),
 		type: 'Data Science',
-	}
+	},
+	{
+		slug: 'yamom',
+		color: '#b8161e',
+		description: 'Yet Another Module Organiser / Manager offers the latest cutting edge features for NUS students favouring efficiency and productivity. \
+			Schedule your timetable without your fingers leaving your keyboard.',
+		shortDescription:
+			'CLI for managing modules in NUS',
+		links: [{ to: 'https://github.com/AY2223S1-CS2113-F11-3/tp', label: 'Github Repo' },
+			{ to: 'https://ay2223s1-cs2113-f11-3.github.io/tp/DeveloperGuide.html', label: 'Developer Guide' },
+			{ to: 'https://ay2223s1-cs2113-f11-3.github.io/tp/UserGuide.html', label: 'User Guide' }
+		],
+		logo: Assets.Java,
+		name: 'Yet Another Module Organiser / Manager',
+		period: {
+			from: new Date(2022, 8, 1), to: new Date(2022, 11, 30)
+		},
+		skills: getSkills('java'),
+		type: 'Software Development',
+	},
 ];
 
 const title = 'Projects';

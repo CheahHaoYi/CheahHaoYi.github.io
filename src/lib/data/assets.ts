@@ -45,6 +45,9 @@ const AssetsSkill = {
 	Matplotlib: asset('matplotlib.png'),
 	Scikitlearn: asset('scikitlearn.svg'),
 	Pytorch: asset('pytorch.png'),
+	Scipy: asset('scipy.svg'),
+	Seaborn: asset('seaborn.svg'),
+	Sympy: asset('sympy.svg'),
 };
 
 const AssetsDesign = {
