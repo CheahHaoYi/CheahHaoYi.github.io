@@ -77,7 +77,7 @@ const Assets = {
 	Verilog: asset('verilog.png'),
 	RVRC: asset('rvrc.jpeg'),
 	Matplotlib: asset('matplotlib.png'),
-	Scikitlearn: asset('scikitlearn.png'),
+	Scikitlearn: asset('scikitlearn.svg'),
 	Pytorch: asset('pytorch.png'),
 };
 

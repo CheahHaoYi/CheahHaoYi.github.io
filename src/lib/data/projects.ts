@@ -2,6 +2,7 @@ import Assets from './assets';
 import { getSkills } from './skills';
 import type { Project } from './types';
 import projPortfolioMd from './md_project/Portfolio_Style_Analysis.md?raw';
+import projCarparkPredMd from './md_project/Carpark_Availability_Prediction.md?raw';
 
 const items: Array<Project> = [
 	{
@@ -49,7 +50,7 @@ const items: Array<Project> = [
 		description: projPortfolioMd,
 		shortDescription:
 			'Implementation of Sharpe Returns Based Style Analysis in Python using Data from Yahoo Finance',
-		links: [{ to: 'https://cheahhaoyi.github.io', label: 'NULL' }],
+		links: [{ to: 'https://cheahhaoyi.github.io/projects/Portfolio%20Style%20Analysis', label: 'Portfolio Website' }],
 		logo: Assets.Python,
 		name: 'Portfolio Style Analysis',
 		period: {
@@ -57,6 +58,21 @@ const items: Array<Project> = [
 		},
 		skills: getSkills('matplotlib', 'python', 'Numpy'),
 		type: 'Finance',
+	},
+	{
+		slug: 'carpark-available-prediction',
+		color: '#c26ad4',
+		description: projCarparkPredMd,
+		shortDescription:
+			'Prediction of Carpark Availability in Singapore using Machine Learning techniques',
+		links: [{ to: 'https://cheahhaoyi.github.io/projects/carpark-available-prediction', label: 'Portfolio Website' }],
+		logo: Assets.Python,
+		name: 'Singapore Carpark Availability Prediction',
+		period: {
+			from: new Date(2024, 8, 1), to: new Date(2024, 11, 30)
+		},
+		skills: getSkills('matplotlib', 'python', 'Numpy', 'pandas', 'sklearn'),
+		type: 'Data Science',
 	}
 ];
 
