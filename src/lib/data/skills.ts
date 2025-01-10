@@ -183,7 +183,16 @@ const items = [
 		category: 'library'
 	}),
 	defineSkill({
-		slug: 'Sklearn',
+		slug: 'pandas',
+		color: 'blue',
+		description:
+			'Used for Data Visualization, Plotting and Graphing',
+		logo: Assets.Pandas,
+		name: 'Pandas',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'sklearn',
 		color: 'orange',
 		description:
 			'Used for numerical Machine Learning',
