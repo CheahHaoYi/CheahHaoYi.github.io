@@ -6,79 +6,80 @@ const asset = (lightFilename: string, darkFilename = lightFilename) => {
 	return { light: url(lightFilename), dark: url(darkFilename) };
 };
 
-const Assets = {
-	AWS: asset('aws.svg'),
-	Bootstrap: asset('bootstrap.svg'),
+const AssetsEdu = {
+	Unknown: asset('no-img.svg'),
+	NUS: asset('nus.jpg'),
+	DTU: asset('DTU.jpg'),
+	RVRC: asset('rvrc.jpeg'),
+};
+
+const AssetsExp = {
+	Unknown: asset('no-img.svg'),
+	ESP: asset('esp.svg'),
+};
+
+const AssetsSkill = {
+	Unknown: asset('no-img.svg'),
+	// Low Level
 	C: asset('c.svg'),
 	Cpp: asset('cpp.svg'),
-	Celery: asset('celery.svg'),
+	Nginx: asset('nginx.svg'),
+	RISCV: asset('risc_v.webp'),
+	Verilog: asset('verilog.png'),
+	Arduino: asset('arduino.svg'),
+	
+	// Web Development
+	TypeScript: asset('ts.png'),
+	NodeJs: asset('node.png'),
+	Svelte: asset('svelte.svg'),
+	JavaScript: asset('js.png'),
+	Java: asset('java.png'),
+	HTML: asset('html.svg'),
+	CSS: asset('css.svg'),
+	Vite: asset('vite.png'),
+	
+	// Python Libraries
+	Python: asset('python.png'),
+	Numpy: asset('numpy.svg'),
+	Pandas: asset('pandas.svg'),
+	Matplotlib: asset('matplotlib.png'),
+	Scikitlearn: asset('scikitlearn.svg'),
+	Pytorch: asset('pytorch.png'),
+};
+
+const AssetsDesign = {
+	Premiere: asset('premiere.svg'),
+	Photoshop: asset('photoshop.svg'),
+	AfterEffects: asset('after-effects.svg'),
+	Illustrator: asset('illustrator.svg'),
+};
+
+
+const AssetsToLearn = {
+	AWS: asset('aws.svg'),
+	Bootstrap: asset('bootstrap.svg'),
 	Django: asset('django.svg'),
 	FastApi: asset('fastapi'),
 	Flask: asset('flask.svg'),
 	Go: asset('go.svg'),
 	Kafka: asset('kafka.svg'),
-	Neo4j: asset('neo4j.svg'),
-	Nginx: asset('nginx.svg'),
-	Numpy: asset('numpy.svg'),
-	Pandas: asset('pandas.svg'),
-	RabbitMQ: asset('rabbitmq.svg'),
 	Rust: asset('rust.svg', 'rust-dark.png'),
-	Scrapy: asset('scrapy.png'),
 	Selenium: asset('selenium.svg'),
 	Docker: asset('docker.svg'),
 	Kubernetes: asset('kubernetes.svg'),
-	Csharp: asset('csharp.svg'),
-	Xamarin: asset('xamarin.svg'),
-	TypeScript: asset('ts.png'),
 	VueJs: asset('vue.png'),
 	ReactJs: asset('react.svg'),
-	Dart: asset('dart.png'),
-	Kotlin: asset('kotlin.png'),
-	Python: asset('python.png'),
-	NodeJs: asset('node.png'),
 	Deno: asset('deno.svg'),
-	Svelte: asset('svelte.svg'),
 	ExpressJs: asset('express.png'),
-	JavaScript: asset('js.png'),
-	Fastify: asset('fastify.svg', 'fastify-dark.png'),
-	NestJs: asset('nest.svg'),
-	Quasar: asset('quasar.svg'),
-	SolidJs: asset('solid.svg'),
 	Electron: asset('electron.png'),
-	Flutter: asset('flutter.svg'),
-	Java: asset('java.png'),
-	AdonisJs: asset('adonis.png'),
 	Android: asset('android.png'),
 	Angular: asset('angular.png'),
 	PostgreSQL: asset('postgres.png'),
 	Firebase: asset('firebase.png'),
 	Sass: asset('sass.png'),
-	Unknown: asset('no-img.svg'),
-	MongoDB: asset('mongodb.svg'),
-	Redis: asset('redis.svg'),
-	Tailwind: asset('tailwind.svg'),
-	HTML: asset('html.svg'),
-	Premiere: asset('premiere.svg'),
-	Photoshop: asset('photoshop.svg'),
-	CSS: asset('css.svg'),
-	AfterEffects: asset('after-effects.svg'),
-	Illustrator: asset('illustrator.svg'),
-	Nuxt: asset('nuxt.png'),
-	Vite: asset('vite.png'),
 	Vitest: asset('vitest.svg'),
-	Jest: asset('jest.png'),
-	Unocss: asset('unocss.svg'),
-	Ruvy: asset('ruvy.svg'),
-	Postcss: asset('postcss.svg'),
-	NUS: asset('nus.jpg'),
-	DTU: asset('DTU.jpg'),
-	ESP: asset('esp.svg'),
-	RISCV: asset('risc_v.webp'),
-	Verilog: asset('verilog.png'),
-	RVRC: asset('rvrc.jpeg'),
-	Matplotlib: asset('matplotlib.png'),
-	Scikitlearn: asset('scikitlearn.svg'),
-	Pytorch: asset('pytorch.png'),
 };
+
+const Assets = { ...AssetsEdu, ...AssetsExp, ...AssetsSkill, ...AssetsDesign, ...AssetsToLearn };	
 
 export default Assets;

@@ -78,20 +78,7 @@ export const groupByCategory = (
 
 const title = 'Skills';
 
-/*
-defineSkill({
-		slug: '',
-		color: '',
-		description:
-			'',
-		logo: Assets.Sass,
-		name: '',
-		category: '' // 'pro-lang' 'library' 'markup-style'
-}),
-
-*/
-
-const items = [
+const itemsProLang = [
 	defineSkill({
 		slug: 'js',
 		color: 'yellow',
@@ -111,7 +98,16 @@ const items = [
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'C',
+		slug: 'java',
+		color: 'red',
+		description:
+			'High-level programming language. Used for Android Development, Web Development and Enterprise Applications',
+		logo: Assets.Java,
+		name: 'Java',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'c',
 		color: 'blue',
 		description:
 			'Low-level programming language. Mainly used for Embedded systems development',
@@ -120,7 +116,7 @@ const items = [
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'Cpp',
+		slug: 'cpp',
 		color: 'blue',
 		description:
 			'Low-level programming language with Object Oriented Programming. Mainly used for Embedded systems development',
@@ -128,15 +124,7 @@ const items = [
 		name: 'C++',
 		category: 'pro-lang' 
 	}),
-	defineSkill({
-		slug: 'python',
-		color: 'yellow',
-		description:
-			'High Level language. Used for Numeric Analysis, Machine Learning, Scripting and Visualizations',
-		logo: Assets.Python,
-		name: 'Python',
-		category: 'pro-lang'
-	}),
+	
 	defineSkill({
 		slug: 'verilog',
 		color: 'blue',
@@ -147,25 +135,48 @@ const items = [
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'css',
-		color: 'blue',
+		slug: 'python',
+		color: 'yellow',
 		description:
-			'Some experience with CSS. Learn enough to style a website. Currently learning SASS.',
-		logo: Assets.CSS,
-		name: 'CSS',
-		category: 'markup-style'
+			'High Level language. Used for Numeric Analysis, Machine Learning, Scripting and Visualizations',
+		logo: Assets.Python,
+		name: 'Python',
+		category: 'pro-lang'
+	}),
+	
+] as const;
+
+const itemsFramework = [
+	defineSkill({
+		slug: 'esp-idf',
+		color: 'red',
+		description:
+			'Espressif IoT Development Framework (ESP-IDF) is the official development framework using C/C++',
+		logo: Assets.ESP,
+		name: 'ESP-IDF',
+		category: 'framework'
 	}),
 	defineSkill({
-		slug: 'html',
+		slug: 'svelte',
 		color: 'orange',
-		description:
-			'Some experience with HTML. Learn enough to create a website.',
-		logo: Assets.HTML,
-		name: 'HTML',
-		category: 'markup-style'
+		description: svelteMd,
+		logo: Assets.Svelte,
+		name: 'Svelte',
+		category: 'framework'
 	}),
 	defineSkill({
-		slug: 'Numpy',
+		slug: 'arduino',
+		color: 'blue',
+		description: 'Open-source electronics platform based on easy-to-use hardware and software',
+		logo: Assets.Arduino,
+		name: 'Arduino',
+		category: 'framework'
+	}),
+] as const;
+
+const itemsLibrary = [
+	defineSkill({
+		slug: 'numpy',
 		color: 'blue',
 		description:
 			'Used for Numerical Analysis, Scientific Computing, Machine Learning and Data Analysis',
@@ -174,7 +185,7 @@ const items = [
 		category: 'library'
 	}),
 	defineSkill({
-		slug: 'Matplotlib',
+		slug: 'matplotlib',
 		color: 'blue',
 		description:
 			'Used for Data Visualization, Plotting and Graphing',
@@ -201,7 +212,7 @@ const items = [
 		category: 'library'
 	}),
 	defineSkill({
-		slug: 'Pytorch',
+		slug: 'pytorch',
 		color: 'orange',
 		description:
 			'Build and train neural networks',
@@ -209,24 +220,30 @@ const items = [
 		name: 'Pytorch',
 		category: 'library'
 	}),
+] as const;
+
+const itemsMarkUpStyle = [
 	defineSkill({
-		slug: 'esp-idf',
-		color: 'red',
+		slug: 'css',
+		color: 'blue',
 		description:
-			'Espressif IoT Development Framework (ESP-IDF) is the official development framework using C/C++',
-		logo: Assets.ESP,
-		name: 'ESP-IDF',
-		category: 'framework'
+			'Some experience with CSS. Learn enough to style a website. Currently learning SASS.',
+		logo: Assets.CSS,
+		name: 'CSS',
+		category: 'markup-style'
 	}),
 	defineSkill({
-		slug: 'svelte',
+		slug: 'html',
 		color: 'orange',
-		description: svelteMd,
-		logo: Assets.Svelte,
-		name: 'Svelte',
-		category: 'framework'
-	})
+		description:
+			'Some experience with HTML. Learn enough to create a website.',
+		logo: Assets.HTML,
+		name: 'HTML',
+		category: 'markup-style'
+	}),
 ] as const;
+
+const items = [...itemsProLang, ...itemsFramework, ...itemsLibrary, ...itemsMarkUpStyle];
 
 const SkillsData = {
 	title,

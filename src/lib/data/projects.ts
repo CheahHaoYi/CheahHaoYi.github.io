@@ -56,7 +56,7 @@ const items: Array<Project> = [
 		period: {
 			from: new Date(2024, 8, 1), to: new Date(2024, 11, 30)
 		},
-		skills: getSkills('matplotlib', 'python', 'Numpy'),
+		skills: getSkills('matplotlib', 'python', 'numpy'),
 		type: 'Finance',
 	},
 	{
@@ -71,7 +71,7 @@ const items: Array<Project> = [
 		period: {
 			from: new Date(2024, 8, 1), to: new Date(2024, 11, 30)
 		},
-		skills: getSkills('matplotlib', 'python', 'Numpy', 'pandas', 'sklearn'),
+		skills: getSkills('matplotlib', 'python', 'numpy', 'pandas', 'sklearn'),
 		type: 'Data Science',
 	}
 ];
