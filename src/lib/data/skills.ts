@@ -220,6 +220,33 @@ const itemsLibrary = [
 		name: 'Pytorch',
 		category: 'library'
 	}),
+	defineSkill({
+		slug: 'scipy',
+		color: 'blue',
+		description:
+			'Used for Scientific Computing',
+		logo: Assets.Scipy,
+		name: 'Scipy',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'seaborn',
+		color: 'blue',
+		description:
+			'Used for Data Visualization',
+		logo: Assets.Seaborn,
+		name: 'Seaborn',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'sympy',
+		color: 'green',
+		description:
+			'Used for Symbolic Mathematics',
+		logo: Assets.Sympy,
+		name: 'Sympy',
+		category: 'library'
+	})
 ] as const;
 
 const itemsMarkUpStyle = [
