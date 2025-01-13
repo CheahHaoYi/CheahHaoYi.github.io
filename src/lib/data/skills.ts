@@ -241,6 +241,24 @@ const itemsMarkUpStyle = [
 		name: 'HTML',
 		category: 'markup-style'
 	}),
+	defineSkill({
+		slug: 'uml',
+		color: 'green',
+		description:
+			'Some experience with UML to create diagrams for software development',
+		logo: Assets.Uml,
+		name: 'UML',
+		category: 'markup-style'
+	}),
+	defineSkill({
+		slug: 'latex',
+		color: 'black',
+		description:
+			'Some experience with LaTeX to create documents and document algorithms and equations',
+		logo: Assets.Latex,
+		name: 'LaTex',
+		category: 'markup-style'
+	}),
 ] as const;
 
 const items = [...itemsProLang, ...itemsFramework, ...itemsLibrary, ...itemsMarkUpStyle];
