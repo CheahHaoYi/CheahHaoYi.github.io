@@ -62,7 +62,8 @@ const items: Array<Project> = [
 	{
 		slug: 'carpark-available-prediction',
 		color: '#c26ad4',
-		description: projCarparkPredMd,
+		description: "Test",
+		// description: projCarparkPredMd,
 		shortDescription:
 			'Prediction of Carpark Availability in Singapore using Machine Learning techniques',
 		links: [{ to: 'https://cheahhaoyi.github.io/projects/carpark-available-prediction', label: 'Portfolio Website' }],
@@ -92,6 +93,22 @@ const items: Array<Project> = [
 		},
 		skills: getSkills('java'),
 		type: 'Software Development',
+	},
+	{
+		slug: 'dllm',
+		color: '#b8161e',
+		description: 'Don\'t Leave Laundry Messy is a smart laundry monitoring system that uses a combination of IoT devices and machine learning to monitor the status of laundry machines in real-time. ',
+		shortDescription:
+			'A smart laundry monitoring system',
+		links: [{ to: 'https://github.com/CheahHaoYi/DLLM_IoT', label: 'Github Repo' },],
+		logo: Assets.ESP,
+		name: 'Don\'t Leave Laundry Messy',
+		period: {
+			from: new Date(2024, 8, 1), to: new Date(2024, 11, 30)
+		},
+		skills: getSkills('python', 'arduino', 'esp-idf', 'pytorch'),
+		type: 'Software Development',
+		linkMarkdown: "https://raw.githubusercontent.com/CheahHaoYi/DLLM_IoT/refs/heads/main/README.md",
 	},
 ];
 
