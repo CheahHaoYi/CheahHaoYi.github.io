@@ -13,6 +13,7 @@
 	import type { Project } from '$lib/data/types';
 	import { computeExactDuration, getMonthAndYear, href } from '$lib/utils';
 	import { mode } from 'mode-watcher';
+	import { marked } from 'marked';
 
 	let { data }: { data: { item?: Project } } = $props();
 
@@ -66,6 +67,23 @@
 		{:else}
 			<EmptyMarkdown />
 		{/if}
+		
+		{#if data.item.linkHtml }
+			{#await fetch(data.item.linkHtml.trim()).then(r => r.text()) then htmlFile}
+				{@html htmlFile}
+			{:catch error}
+				<EmptyMarkdown />
+			{/await}
+		{/if}
+
+		{#if data.item.linkMarkdown }
+			{#await fetch(data.item.linkMarkdown.trim()).then(r => r.text()) then markdownFile}
+				<Markdown content={markdownFile} />
+			{:catch error}
+				<EmptyMarkdown />
+			{/await}
+		{/if}
+
 		<Separator />
 		<div class="flex flex-col gap-2 px-4 pt-4">
 			{#if data.item.screenshots && data.item.screenshots.length > 0}
