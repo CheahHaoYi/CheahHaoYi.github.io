@@ -1,0 +1,180 @@
+---
+import { Layout, Card, Button, Badge, Callout } from '@cheahhaoyi/site-kit';
+import { portfolioNavLinks } from '../data/navigation';
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Contact' },
+];
+
+const contactChannels = [
+  {
+    title: 'Direct Email',
+    subtitle: 'Primary Communication Channel',
+    value: 'hellohaoyicheah@gmail.com',
+    href: 'mailto:hellohaoyicheah@gmail.com',
+    actionLabel: 'Send Email',
+    description: 'Best for engineering opportunities, security discussions, and research collaborations.',
+    badge: 'Fastest Response',
+    iosColor: 'purple' as const,
+  },
+  {
+    title: 'GitHub',
+    subtitle: 'Code Repositories & Open Source',
+    value: 'github.com/CheahHaoYi',
+    href: 'https://github.com/CheahHaoYi',
+    actionLabel: 'View GitHub Profile',
+    description: 'Explore my open source repositories, firmware projects, and design system repositories.',
+    badge: 'Code & PRs',
+    iosColor: 'blue' as const,
+  },
+  {
+    title: 'LinkedIn',
+    subtitle: 'Professional Network & Experience',
+    value: 'linkedin.com/in/cheahhaoyi',
+    href: 'https://www.linkedin.com/in/cheahhaoyi/',
+    actionLabel: 'Connect on LinkedIn',
+    description: 'Professional networking, work history verifications, and industry connections.',
+    badge: 'Professional',
+    iosColor: 'indigo' as const,
+  },
+];
+---
+
+<Layout
+  title="Contact — Hao Yi Cheah"
+  description="Get in touch with Hao Yi Cheah regarding network engineering, AI security, or research collaborations."
+  breadcrumbs={breadcrumbs}
+  siteTitle="Hao Yi Cheah"
+  siteSubtitle="Network & AI Security"
+  navLinks={portfolioNavLinks}
+>
+  <div class="container stack-lg">
+    <!-- Header -->
+    <header class="stack-sm">
+      <div class="cluster">
+        <Badge pill={true} iosColor="purple" pulse={true}>Get In Touch</Badge>
+        <span class="meta-label">Direct &amp; Verified</span>
+      </div>
+      <h1 class="page-title">Contact &amp; Connect</h1>
+      <p class="page-lead">
+        Have a question about network architectures, Linux systems hardening, or AI security guardrails?
+        I am always open to technical discussions and collaboration.
+      </p>
+    </header>
+
+    <!-- Architecture Decision Note -->
+    <Callout variant="tip" title="Zero-Dependency Static Contact Architecture">
+      This static site intentionally relies on direct, verified contact channels (<code>mailto:</code> and
+      direct profile links) rather than unauthenticated third-party form delivery endpoints, ensuring 100%
+      reliability and zero risk of silent delivery failures.
+    </Callout>
+
+    <!-- Contact Cards Grid -->
+    <section class="grid-responsive">
+      {contactChannels.map((channel) => (
+        <Card
+          variant="glass"
+          doubleBezel={true}
+          title={channel.title}
+          badge={channel.badge}
+          badgeVariant="accent"
+        >
+          <div class="stack-sm">
+            <p class="channel-subtitle">{channel.subtitle}</p>
+            <p class="channel-desc">{channel.description}</p>
+            <div class="channel-action">
+              <Button
+                variant="primary"
+                size="md"
+                pill={true}
+                href={channel.href}
+                target={channel.href.startsWith('mailto:') ? undefined : '_blank'}
+              >
+                <span>{channel.actionLabel}</span>
+                <span class="btn-icon-wrapper">&rarr;</span>
+              </Button>
+            </div>
+          </div>
+        </Card>
+      ))}
+    </section>
+
+    <!-- PGP / Security Disclosure -->
+    <section>
+      <Card variant="tonal">
+        <div class="stack-sm">
+          <div class="cluster">
+            <Badge pill={true} iosColor="mint">Security &amp; Privacy</Badge>
+          </div>
+          <h2 class="sub-heading">Vulnerability Reporting &amp; Security Discussions</h2>
+          <p class="sub-text">
+            For sensitive security communications or vulnerability disclosures regarding any project or
+            infrastructure in this portfolio, please reach out directly via email with <code>[SECURITY]</code>
+            in the subject line for prioritized handling.
+          </p>
+        </div>
+      </Card>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .page-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--tracking-tighter);
+    color: var(--color-text-primary);
+  }
+
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .page-lead {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+    max-width: 800px;
+  }
+
+  .meta-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    color: var(--color-text-muted);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+  }
+
+  .channel-subtitle {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-accent-primary);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+  }
+
+  .channel-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    margin: var(--space-1) 0 var(--space-3);
+  }
+
+  .channel-action {
+    margin-top: var(--space-2);
+  }
+
+  .sub-heading {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .sub-text {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+</style>

@@ -1,0 +1,269 @@
+---
+import { Layout, Card, Badge, Tag, Callout, Table, Prose } from '@cheahhaoyi/site-kit';
+import { educationItems } from '../data/education';
+import { portfolioNavLinks } from '../data/navigation';
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'About' },
+];
+
+const certMatrixHeaders = ['Certification / Domain', 'Focus Area', 'Role in AI Systems Security'];
+const certMatrixRows = [
+  [
+    'CISSP ((ISC)²)',
+    'Enterprise Security Governance & Architecture',
+    'Architectural defense-in-depth, cryptographic assurance, access controls, and risk governance for ML pipelines.',
+  ],
+  [
+    'CCNA (Cisco)',
+    'Routing, Switching & IP Connectivity',
+    'Ground-truth network telemetry, deterministic egress filtering, packet inspection, and micro-segmentation.',
+  ],
+  [
+    'RHCSA (Red Hat)',
+    'Enterprise Linux Systems & Security',
+    'Hardened host OS, least-privilege service containment with SELinux, and secure container sandboxing.',
+  ],
+  [
+    'AI Security',
+    'Adversarial ML & LLM Guardrails',
+    'Input/output stream sanitization, prompt injection defenses, model theft mitigation, and real-time inference monitoring.',
+  ],
+];
+---
+
+<Layout
+  title="About Hao Yi Cheah — Background & Technical Philosophy"
+  description="Computer engineer and network security practitioner moving into AI security. Background in enterprise routing, Linux administration, and LLM defense."
+  breadcrumbs={breadcrumbs}
+  siteTitle="Hao Yi Cheah"
+  siteSubtitle="Network & AI Security"
+  navLinks={portfolioNavLinks}
+>
+  <div class="container stack-lg">
+    <!-- Header -->
+    <header class="stack-sm">
+      <div class="cluster">
+        <Badge pill={true} iosColor="purple" pulse={true}>Background &amp; Vision</Badge>
+        <Tag pill={true} variant="cert">CISSP</Tag>
+        <Tag pill={true} iosColor="blue">CCNA</Tag>
+        <Tag pill={true} iosColor="mint">RHCSA</Tag>
+      </div>
+      <h1 class="page-title">About Me &amp; Technical Philosophy</h1>
+      <p class="page-lead">
+        I am a Computer Engineer with deep technical roots in enterprise network protocols, embedded systems,
+        and Linux OS hardening — applying systems engineering rigor to the emerging frontiers of AI security.
+      </p>
+    </header>
+
+    <!-- Narrative Section: Network Engineer to AI Security -->
+    <section class="stack">
+      <Card variant="glass" doubleBezel={true}>
+        <Prose>
+          <h2>The Journey: From Ground Truth to AI Defense</h2>
+          <p>
+            My engineering foundation was built from the silicon up: synthesizing 32-bit RISC-V processors in
+            Verilog, writing low-level Board Support Packages (BSP) in C/C++ for ESP32 microcontrollers at
+            Espressif Systems, and designing deterministic network topologies with OSPF and BGP.
+          </p>
+          <p>
+            As generative models and autonomous agent architectures rapidly integrate into production systems,
+            they introduce novel vulnerability surfaces — from direct and indirect prompt injections to
+            model weights extraction and tool-use privilege escalation. Too often, AI safety is treated solely
+            as prompt-tuning or policy alignment.
+          </p>
+          <p>
+            <strong>My perspective is rooted in infrastructure reality:</strong> AI models are software
+            processes executing on Linux hosts, communicating across IP networks, and interacting with APIs.
+            The strongest guardrails for AI are built on the battle-tested principles of network segmentation,
+            kernel-level isolation, deterministic egress controls, and rigorous defense-in-depth architecture.
+          </p>
+        </Prose>
+      </Card>
+    </section>
+
+    <!-- How the Certifications Fit Together -->
+    <section class="stack">
+      <div class="stack-sm">
+        <div class="cluster">
+          <Badge pill={true} iosColor="indigo">Synergy Matrix</Badge>
+          <span class="meta-label">Architectural Defense</span>
+        </div>
+        <h2 class="section-title">How the Certifications Fit Together</h2>
+        <p class="section-desc">
+          Each certification and discipline represents a critical layer in the security defense-in-depth model.
+        </p>
+      </div>
+
+      <Table
+        headers={certMatrixHeaders}
+        rows={certMatrixRows}
+        caption="Security Domain & AI Defense Cross-Functional Matrix"
+        striped={true}
+      />
+    </section>
+
+    <!-- Academic Background -->
+    <section class="stack">
+      <div class="stack-sm">
+        <div class="cluster">
+          <Badge pill={true} iosColor="mint">Education</Badge>
+          <span class="meta-label">National University of Singapore &amp; DTU</span>
+        </div>
+        <h2 class="section-title">Academic Background</h2>
+        <p class="section-desc">
+          Rigorous foundational education spanning computer engineering, robotics, and management.
+        </p>
+      </div>
+
+      <div class="stack">
+        {educationItems.map((item) => (
+          <Card variant="tonal" class="edu-card">
+            <div class="stack-sm">
+              <div class="cluster-between">
+                <div>
+                  <h3 class="edu-institution">{item.institution}</h3>
+                  <p class="edu-degree">{item.degree}</p>
+                </div>
+                <div class="cluster">
+                  <Badge pill={true} iosColor="purple">{item.period}</Badge>
+                  <Tag pill={true}>{item.location}</Tag>
+                </div>
+              </div>
+
+              <p class="edu-summary">{item.summary}</p>
+
+              <div class="edu-details-grid">
+                <div>
+                  <span class="edu-subheading">Key Highlights &amp; Tracks:</span>
+                  <ul class="edu-list">
+                    {item.highlights.map((highlight) => (
+                      <li>{highlight}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <span class="edu-subheading">Selected Coursework:</span>
+                  <div class="cluster coursework-tags">
+                    {item.coursework.map((course) => (
+                      <Tag pill={true} size="sm">{course}</Tag>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </section>
+
+    <!-- Quick Navigation / Callout -->
+    <section>
+      <Callout variant="info" title="Explore Practical Implementations">
+        Ready to see these principles in action? Check out the <a href="/projects">Projects Showcase</a> or
+        explore the <a href="/experience">Work History &amp; Experience Timeline</a>.
+      </Callout>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .page-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--tracking-tighter);
+    color: var(--color-text-primary);
+  }
+
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .page-lead {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+    max-width: 800px;
+  }
+
+  .section-title {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-text-primary);
+  }
+
+  .section-desc {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+
+  .meta-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    color: var(--color-text-muted);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+  }
+
+  /* Education Cards */
+  .edu-institution {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .edu-degree {
+    font-size: var(--text-sm);
+    color: var(--color-accent-primary);
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+  }
+
+  .edu-summary {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+  }
+
+  .edu-details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border);
+  }
+
+  @media (min-width: 768px) {
+    .edu-details-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .edu-subheading {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-2);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+  }
+
+  .edu-list {
+    margin: 0;
+    padding-left: var(--space-4);
+    font-size: var(--text-xs);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+  }
+
+  .coursework-tags {
+    gap: var(--space-1-5);
+  }
+</style>

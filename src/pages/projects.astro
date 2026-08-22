@@ -1,0 +1,117 @@
+---
+import { Layout, Card, Button, Badge, Callout } from '@cheahhaoyi/site-kit';
+import { projects } from '../data/projects';
+import { portfolioNavLinks } from '../data/navigation';
+
+const breadcrumbs = [
+  { label: 'Home', href: '/' },
+  { label: 'Projects' },
+];
+---
+
+<Layout
+  title="Projects Showcase — Hao Yi Cheah"
+  description="Technical projects catalog spanning AI guardrails, RISC-V processor design, IoT embedded firmware, and quantitative data science."
+  breadcrumbs={breadcrumbs}
+  siteTitle="Hao Yi Cheah"
+  siteSubtitle="Network & AI Security"
+  navLinks={portfolioNavLinks}
+>
+  <div class="container stack-lg">
+    <!-- Header -->
+    <header class="stack-sm">
+      <div class="cluster">
+        <Badge pill={true} iosColor="purple" pulse={true}>Engineering Showcase</Badge>
+        <span class="meta-label">Landing &amp; Index</span>
+      </div>
+      <h1 class="page-title">Featured Projects &amp; Research</h1>
+      <p class="page-lead">
+        A curated index of hardware implementations, embedded firmware stacks, machine learning systems,
+        and AI security frameworks. Detailed write-ups and live repositories are linked directly.
+      </p>
+    </header>
+
+    <!-- Notice banner regarding multi-repo architecture -->
+    <Callout variant="info" title="Multi-Repo Architecture Note">
+      This page serves as a centralized teaser index. Full technical write-ups, datasets, and extended
+      documentation live in dedicated project repositories and sub-sites.
+    </Callout>
+
+    <!-- Projects Grid -->
+    <section class="stack">
+      <div class="grid-responsive">
+        {projects.map((project) => (
+          <Card
+            variant="glass"
+            doubleBezel={project.featured}
+            title={project.name}
+            description={project.description}
+            badge={project.badge}
+            badgeVariant={project.featured ? 'accent' : 'default'}
+            date={project.date}
+            href={project.repoUrl || project.demoUrl || project.detailPath}
+            tags={project.tags}
+          >
+            <div class="project-card-footer">
+              <div class="cluster">
+                {project.repoUrl && (
+                  <Button variant="ghost" size="sm" pill={true} href={project.repoUrl} target="_blank">
+                    Source Code
+                  </Button>
+                )}
+                {project.demoUrl && (
+                  <Button variant="outline" size="sm" pill={true} href={project.demoUrl} target="_blank">
+                    <span>Live Demo</span>
+                    <span class="btn-icon-wrapper">&rarr;</span>
+                  </Button>
+                )}
+                {project.detailPath && !project.demoUrl && (
+                  <Button variant="outline" size="sm" pill={true} href={project.detailPath}>
+                    <span>Read Overview</span>
+                    <span class="btn-icon-wrapper">&rarr;</span>
+                  </Button>
+                )}
+              </div>
+            </div>
+          </Card>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .page-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: var(--tracking-tighter);
+    color: var(--color-text-primary);
+  }
+
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: var(--text-4xl);
+    }
+  }
+
+  .page-lead {
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-secondary);
+    max-width: 800px;
+  }
+
+  .meta-label {
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    color: var(--color-text-muted);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+  }
+
+  .project-card-footer {
+    margin-top: var(--space-4);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--color-border-subtle);
+  }
+</style>
