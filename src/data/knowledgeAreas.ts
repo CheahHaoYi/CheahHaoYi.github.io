@@ -50,6 +50,18 @@ export const knowledgeAreas: KnowledgeArea[] = [
     featured: true,
   },
   {
+    name: 'System Design & Distributed Architecture',
+    slug: 'systemdesign',
+    path: '/systemdesign',
+    description:
+      'Scalable distributed systems, high availability patterns, database partitioning, consensus protocols, and microservices architecture.',
+    tags: ['Distributed Systems', 'Microservices', 'Scalability', 'High Availability', 'Database Sharding'],
+    status: 'published',
+    badge: 'System Design',
+    iosColor: 'orange',
+    featured: true,
+  },
+  {
     name: 'AI Security & Adversarial Defense',
     slug: 'ai-security',
     path: '/projects#ai-security',

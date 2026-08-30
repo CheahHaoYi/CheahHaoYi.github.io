@@ -24,6 +24,7 @@ const featuredProjects = projects.filter((p) => p.featured);
         <Tag pill={true} variant="cert">CISSP</Tag>
         <Tag pill={true} iosColor="blue">CCNA</Tag>
         <Tag pill={true} iosColor="mint">RHCSA</Tag>
+        <Tag pill={true} iosColor="orange">System Design</Tag>
         <Tag pill={true} iosColor="indigo">AI Security</Tag>
       </div>
 
@@ -32,9 +33,9 @@ const featuredProjects = projects.filter((p) => p.featured);
           Architecting Resilient Networks &amp; <span class="text-gradient">Hardened AI Systems</span>
         </h1>
         <p class="hero-lead">
-          I am a Computer Engineer specializing in enterprise networking, hardened Linux administration,
-          and architectural defense-in-depth (CISSP, CCNA, RHCSA) — bridging systems engineering into
-          securing next-generation AI pipelines, model guardrails, and real-time telemetry.
+          Computer Engineer specializing in enterprise networking, Linux systems hardening,
+          and distributed architecture (CISSP, CCNA, RHCSA) — bridging infrastructure engineering with
+          AI security, model guardrails, and real-time telemetry.
         </p>
       </div>
 
@@ -58,13 +59,11 @@ const featuredProjects = projects.filter((p) => p.featured);
         <div class="stack-sm">
           <div class="cluster">
             <span class="pillar-label">// THE CONVERGENCE</span>
-            <Badge pill={true} iosColor="indigo">Network &rarr; AI Security</Badge>
+            <Badge pill={true} iosColor="indigo">Infrastructure &rarr; AI Security</Badge>
           </div>
           <h2 class="section-heading">Why Systems &amp; Network Engineering Anchor AI Security</h2>
           <p>
-            AI safety cannot exist in a vacuum above the stack. Defending generative models, autonomous agents,
-            and inference workloads requires ground-truth network telemetry, deterministic egress filtering,
-            hardened kernel namespaces (SELinux/cgroups), and rigorous zero-trust cryptographic boundaries.
+            AI safety requires infrastructure grounding. Defending models, autonomous agents, and inference pipelines demands deterministic network telemetry, egress filtering, kernel isolation, and zero-trust boundaries.
           </p>
         </div>
 
@@ -73,24 +72,21 @@ const featuredProjects = projects.filter((p) => p.featured);
             <div class="pillar-number">01</div>
             <h3 class="pillar-title">Packet &amp; Egress Truth</h3>
             <p class="pillar-desc">
-              Deterministic firewall rules, deep packet inspection, and mTLS identity layers preventing
-              model weight exfiltration and unauthorized side-channel egress.
+              Deterministic firewall rules, DPI, and mTLS identity layers preventing model weight exfiltration and unauthorized egress.
             </p>
           </div>
           <div class="pillar-item">
             <div class="pillar-number">02</div>
             <h3 class="pillar-title">Hardened Linux Substrates</h3>
             <p class="pillar-desc">
-              Least-privilege process boundaries, SELinux policies, and ephemeral container sandboxing
-              containing arbitrary code execution and sandbox escapes.
+              Least-privilege isolation, SELinux policies, and container sandboxing containing arbitrary code execution.
             </p>
           </div>
           <div class="pillar-item">
             <div class="pillar-number">03</div>
             <h3 class="pillar-title">Architectural Governance</h3>
             <p class="pillar-desc">
-              Defense-in-depth risk management derived from CISSP domains, ensuring resilient input
-              sanitization, model validation, and continuous auditability.
+              Defense-in-depth risk management derived from CISSP domains, ensuring resilient input sanitization and auditability.
             </p>
           </div>
         </div>
@@ -107,7 +103,7 @@ const featuredProjects = projects.filter((p) => p.featured);
           </div>
           <h2 class="section-title">Certification Study Guides &amp; Architecture Notes</h2>
           <p class="section-desc">
-            Deep technical documentation, lab topologies, and domain notes published across dedicated sub-sites.
+            Technical documentation, lab topologies, and architecture notes across dedicated portals.
           </p>
         </div>
       </div>
@@ -138,7 +134,7 @@ const featuredProjects = projects.filter((p) => p.featured);
           </div>
           <h2 class="section-title">Featured Projects</h2>
           <p class="section-desc">
-            Highlighted engineering initiatives spanning AI guardrails, CPU design, and edge IoT devices.
+            Engineering initiatives spanning AI guardrails, CPU design, and edge IoT devices.
           </p>
         </div>
         <Button variant="ghost" size="sm" pill={true} href="/projects">
@@ -165,8 +161,7 @@ const featuredProjects = projects.filter((p) => p.featured);
     <!-- Contact & Collaboration Callout -->
     <section class="cta-section">
       <Callout variant="tip" title="Open for Technical Exchange & Collaboration">
-        Interested in discussing enterprise networking topologies, Linux kernel hardening, or AI security
-        guardrails? Feel free to reach out via <a href="/contact">the contact page</a> or direct email at{' '}
+        Interested in discussing enterprise networking, Linux hardening, or system design? Reach out via <a href="/contact">the contact page</a> or direct email at{' '}
         <a href="mailto:hellohaoyicheah@gmail.com"><code>hellohaoyicheah@gmail.com</code></a>.
       </Callout>
     </section>

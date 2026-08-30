@@ -12,7 +12,7 @@ This document provides mandatory architectural invariants, coding rules, compone
 
 ### 1.2 Multi-Repo Scope Boundaries
 - **Shallow Content Only**: This repository does *not* own detailed study notes, course write-ups, or full project documentation. It provides introductory bios, timelines, overview cards, and links out.
-- **Cross-Repo Links**: Sibling sites are deployed independently at root subpaths (e.g. `/cissp`, `/ccna`, `/rhcsa`, `/projects`). Links to these properties must be written as absolute paths (`href="/cissp"`).
+- **Cross-Repo Links**: Sibling sites are deployed independently at root subpaths (e.g. `/cissp`, `/ccna`, `/rhcsa`, `/systemdesign`, `/projects`). Links to these properties must be written as absolute paths (`href="/cissp"`).
 
 ### 1.3 Design System & Component Governance
 - All UI components must be imported directly from `@cheahhaoyi/site-kit`:

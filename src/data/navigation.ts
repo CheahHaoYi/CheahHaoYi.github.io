@@ -8,6 +8,7 @@ export const portfolioNavLinks: NavLink[] = [
   { label: 'CISSP', href: '/cissp' },
   { label: 'CCNA', href: '/ccna' },
   { label: 'RHCSA', href: '/rhcsa' },
+  { label: 'System Design', href: '/systemdesign' },
   { label: 'Contact', href: '/contact' },
 ];
 
