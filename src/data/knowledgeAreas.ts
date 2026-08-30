@@ -62,6 +62,18 @@ export const knowledgeAreas: KnowledgeArea[] = [
     featured: true,
   },
   {
+    name: 'Leetcode solutions & algorithmic problem solving',
+    slug: 'leetcode',
+    path: '/leetcode',
+    description:
+      'Solutions to popular Leetcode problems with detailed explanations and algorithmic approaches.',
+    tags: ['Algorithms', 'Data Structures', 'Problem Solving', 'Coding Interview'],
+    status: 'published',
+    badge: 'Leetcode',
+    iosColor: 'green',
+    featured: true,
+  },
+  {
     name: 'AI Security & Adversarial Defense',
     slug: 'ai-security',
     path: '/projects#ai-security',
