@@ -21,7 +21,6 @@ export const educationItems: EducationItem[] = [
       'Second Major in Management',
       'Specialization in Internet of Things (IoT)',
       'Specialization in Robotics',
-      'Undergraduate Research Experience (UREX)',
     ],
     coursework: [
       'Computer Networks (EE4204)',

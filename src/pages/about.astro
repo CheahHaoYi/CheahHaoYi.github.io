@@ -8,38 +8,33 @@ const breadcrumbs = [
   { label: 'About' },
 ];
 
-const certMatrixHeaders = ['Certification / Domain', 'Focus Area', 'Role in AI Systems Security'];
+const certMatrixHeaders = ['Certification / Domain', 'Focus Area', 'What do I know'];
 const certMatrixRows = [
   [
     'CISSP ((ISC)²)',
-    'Enterprise Security Governance & Architecture',
-    'Architectural defense-in-depth, cryptographic assurance, access controls, and risk governance for ML pipelines.',
+    'Enterprise Security Governance',
+    'Defense-in-depth architecture, access controls, cryptography, and ML risk governance.',
   ],
   [
     'CCNA (Cisco)',
     'Routing, Switching & IP Connectivity',
-    'Ground-truth network telemetry, deterministic egress filtering, packet inspection, and micro-segmentation.',
+    'Network telemetry, deterministic egress filtering, packet inspection, and micro-segmentation.',
   ],
   [
-    'RHCSA (Red Hat)',
+    'CNCDP',
+    'Network Cabling Design',
+    'Designing and implementing robust data network cabling infrastructures',
+  ],
+  [
+    'RHCSA (Red Hat) - In Progress',
     'Enterprise Linux Systems & Security',
-    'Hardened host OS, least-privilege service containment with SELinux, and secure container sandboxing.',
+    'Hardened host OS, SELinux least-privilege containment, and secure container sandboxing.',
   ],
   [
-    'System Design',
-    'Distributed Systems & Architecture',
-    'Scalability, high availability, database partitioning, fault tolerance, and microservices architecture.',
-  ],
-  [
-    'Leetcode',
-    'Algorithmic Problem Solving',
-    'Solutions to popular Leetcode problems with detailed explanations and algorithmic approaches.',
-  ],
-  [
-    'AI Security',
-    'Adversarial ML & LLM Guardrails',
-    'Input/output stream sanitization, prompt injection defenses, model theft mitigation, and real-time inference monitoring.',
-  ],
+    'OSCP (Offsec) - In Progress',
+    'Penetration Testing & Ethical Hacking',
+    'Exploiting real-world vulnerabilities across networks, web applications, and cloud environments.',
+  ]
 ];
 ---
 
@@ -64,8 +59,10 @@ const certMatrixRows = [
       </div>
       <h1 class="page-title">About Me &amp; Technical Philosophy</h1>
       <p class="page-lead">
-        I am a Computer Engineer with deep technical roots in enterprise network protocols, embedded systems,
-        and Linux OS hardening — applying systems engineering rigor to the emerging frontiers of AI security.
+        I am a Computer Engineer with practical experience across various domains: 
+      </p>
+      <p>
+        Hardware Design - Network Design - Security Design - System Design
       </p>
     </header>
 
@@ -73,23 +70,12 @@ const certMatrixRows = [
     <section class="stack">
       <Card variant="glass" doubleBezel={true}>
         <Prose>
-          <h2>The Journey: From Ground Truth to AI Defense</h2>
+          <h2>The Journey: From Embedded Silicon to AI Infrastructure Security</h2>
           <p>
-            My engineering foundation was built from the silicon up: synthesizing 32-bit RISC-V processors in
-            Verilog, writing low-level Board Support Packages (BSP) in C/C++ for ESP32 microcontrollers at
-            Espressif Systems, and designing deterministic network topologies with OSPF and BGP.
+            My engineering background spans low-level systems and enterprise infrastructure: from developing C/C++ Board Support Packages (BSP) and network protocols at Espressif Systems to commissioning high-availability data centers, NFVI virtualization, and L2/L3 network security at Huawei.
           </p>
           <p>
-            As generative models and autonomous agent architectures rapidly integrate into production systems,
-            they introduce novel vulnerability surfaces — from direct and indirect prompt injections to
-            model weights extraction and tool-use privilege escalation. Too often, AI safety is treated solely
-            as prompt-tuning or policy alignment.
-          </p>
-          <p>
-            <strong>My perspective is rooted in infrastructure reality:</strong> AI models are software
-            processes executing on Linux hosts, communicating across IP networks, and interacting with APIs.
-            The strongest guardrails for AI are built on the battle-tested principles of network segmentation,
-            kernel-level isolation, deterministic egress controls, and rigorous defense-in-depth architecture.
+            As autonomous AI agents and local inference models deploy into production, threat surfaces expand beyond simple prompt injections to host compromise, privilege escalation, and supply chain vulnerabilities. AI security cannot rely solely on prompt alignment or soft guardrails.
           </p>
         </Prose>
       </Card>
@@ -102,7 +88,7 @@ const certMatrixRows = [
           <Badge pill={true} iosColor="indigo">Synergy Matrix</Badge>
           <span class="meta-label">Architectural Defense</span>
         </div>
-        <h2 class="section-title">How the Certifications Fit Together</h2>
+        <h2 class="section-title">My certifications</h2>
         <p class="section-desc">
           Each certification and discipline represents a critical layer in the security defense-in-depth model.
         </p>
@@ -172,8 +158,8 @@ const certMatrixRows = [
 
     <!-- Quick Navigation / Callout -->
     <section>
-      <Callout variant="info" title="Explore Practical Implementations">
-        Ready to see these principles in action? Check out the <a href="/projects">Projects Showcase</a> or
+      <Callout variant="info" title="Putting knowledge to action!">
+        Check out the <a href="/projects">Projects Showcase</a> or
         explore the <a href="/experience">Work History &amp; Experience Timeline</a>.
       </Callout>
     </section>

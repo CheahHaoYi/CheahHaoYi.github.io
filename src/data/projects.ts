@@ -14,12 +14,21 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: 'AI Security Guardrails & Telemetry',
+    name: 'AIsploitable',
     description:
-      'Input/output stream inspection framework engineered with sub-millisecond overhead to detect prompt injections, jailbreak vectors, and sensitive data leakage.',
-    tags: ['AI Security', 'Python', 'LLM Guardrails', 'Inference Telemetry', 'Safety'],
-    repoUrl: 'https://github.com/CheahHaoYi',
-    detailPath: '/projects#ai-security',
+      'Autonomous threat intelligence and security verification platform leveraging local Gemma models, offline MITRE ATT&CK & ATLAS RAG, and isolated Docker dual-sandboxes for empirical PoC execution.',
+    tags: [
+      'AI Security',
+      'Local LLMs',
+      'Gemma',
+      'FastAPI',
+      'Next.js',
+      'Docker Sandbox',
+      'Threat Intel RAG',
+      'Python',
+    ],
+    repoUrl: 'https://github.com/CheahHaoYi/AIsploitable',
+    detailPath: '/projects#aisploitable',
     featured: true,
     category: 'ai-security',
     badge: 'AI Security',

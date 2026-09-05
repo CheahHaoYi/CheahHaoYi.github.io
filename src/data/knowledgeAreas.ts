@@ -38,7 +38,7 @@ export const knowledgeAreas: KnowledgeArea[] = [
     featured: true,
   },
   {
-    name: 'RHCSA (Red Hat Certified System Administrator)',
+    name: 'RHCSA (Red Hat Certified System Administrator) - In Progress',
     slug: 'rhcsa',
     path: '/rhcsa',
     description:
@@ -74,15 +74,15 @@ export const knowledgeAreas: KnowledgeArea[] = [
     featured: true,
   },
   {
-    name: 'AI Security & Adversarial Defense',
-    slug: 'ai-security',
-    path: '/projects#ai-security',
+    name: 'OSCP (Offensive Security Certified Professional) - In Progress',
+    slug: 'oscp',
+    path: '/oscp',
     description:
-      'Applying rigorous network defense and systems engineering principles to securing AI inference pipelines, defending against prompt injection, and monitoring model telemetry.',
-    tags: ['Adversarial ML', 'LLM Guardrails', 'Inference Telemetry', 'Model Hardening', 'Safety'],
+      'Advanced penetration testing techniques, exploit development, and post-exploitation strategies in a controlled lab environment.',
+    tags: ['Penetration Testing', 'Exploit Development', 'Post-Exploitation', 'Vulnerability Assessment'],
     status: 'published',
-    badge: 'AI Defense',
-    iosColor: 'indigo',
+    badge: 'Penetration Testing',
+    iosColor: 'red',
     featured: true,
   },
 ];
