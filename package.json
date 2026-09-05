@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit && astro check"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/sitemap": "^3.7.4",
     "@cheahhaoyi/site-kit": "github:cheahhaoyi/site-kit#semver:^1.0.0"
   },
   "devDependencies": {
