@@ -14,6 +14,28 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'Unified MITRE Framework Navigator',
+    description:
+      '(Work in Progress) A unified MITRE framework navigator and threat intelligence platform integrating ATT&CK, ATLAS, CAPEC, D3FEND and ENGAGE as a cohesive, interactive knowledge graph for cybersecurity research and analysis.',
+    tags: ['MITRE', 'ATT&CK', 'ATLAS', 'CAPEC', 'D3FEND', 'ENGAGE'],
+    demoUrl: 'https://cheahhaoyi.github.io/mitrall',
+    featured: true,
+    category: 'ai-security',
+    badge: 'Cybersecurity',
+    date: '2026',
+  },
+  {
+    name: 'OSCAL Compliance Navigator',
+    description:
+      '(Work in Progress) Analyzing NIST SP800-53 and Singapore IM8 Reform through a unified compliance framework to automate compliance assessment.',
+    tags: ['OSCAL', 'NIST SP800-53', 'IM8 Reform', 'Compliance Assessment', 'Cybersecurity'],
+    demoUrl: 'https://cheahhaoyi.github.io/oscal',
+    featured: true,
+    category: 'ai-security',
+    badge: 'Cybersecurity',
+    date: '2026',
+  },
+  {
     name: 'AIsploitable',
     description:
       'Autonomous threat intelligence and security verification platform leveraging local Gemma models, offline MITRE ATT&CK & ATLAS RAG, and isolated Docker dual-sandboxes for empirical PoC execution.',
