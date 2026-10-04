@@ -14,6 +14,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'Homelab',
+    description:
+      'A personal homelab environment for experimenting with and learning about various technologies, including cybersecurity, networking, and software development.',
+    tags: ['Homelab', 'Cybersecurity', 'Networking', 'Software Development'],
+    demoUrl: 'https://cheahhaoyi.github.io/homelab',
+    featured: true,
+    category: 'hardware',
+    badge: 'Hardware / Homelab',
+    date: '2026',
+  },
+  {
     name: 'Unified MITRE Framework Navigator',
     description:
       '(Work in Progress) A unified MITRE framework navigator and threat intelligence platform integrating ATT&CK, ATLAS, CAPEC, D3FEND and ENGAGE as a cohesive, interactive knowledge graph for cybersecurity research and analysis.',
@@ -63,7 +74,7 @@ export const projects: Project[] = [
     tags: ['Astro', 'TypeScript', 'Design Tokens', 'CSS Variables', 'Accessibility'],
     repoUrl: 'https://github.com/CheahHaoYi/CheahHaoYi.github.io',
     demoUrl: 'https://cheahhaoyi.github.io',
-    featured: true,
+    featured: false,
     category: 'web',
     badge: 'Web Architecture',
     date: '2026',
