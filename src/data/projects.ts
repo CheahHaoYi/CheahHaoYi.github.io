@@ -68,6 +68,18 @@ export const projects: Project[] = [
     date: '2026',
   },
   {
+    name: 'BTO Explorer 3D',
+    description:
+      'A map-first application for exploring Singapore HDB and BTO developments. The map uses Leaflet’s 2D renderer with OpenStreetMap raster tiles, HDB footprints, URA planning regions, and searchable block details. Selected existing HDB blocks open a rotatable SVG massing view built from GeoJSON footprints and source floor counts, with no WebGL required.',
+    tags: ['Singapore HDB', 'BTO', 'Leaflet', 'OpenStreetMap', 'GeoJSON', 'SVG'],
+    repoUrl: 'https://github.com/CheahHaoYi/bto-explorer-3d',
+    demoUrl: 'https://cheahhaoyi.github.io/bto-explorer-3d',
+    featured: false,
+    category: 'web',
+    date: '2026',
+    badge: 'Mapping / Web App',
+  },
+  {
     name: 'Portfolio Website & Design System',
     description:
       'Personal multi-repo portfolio hub and design token ecosystem built with Astro 5.x, TypeScript, and the @cheahhaoyi/site-kit zero-bundle component library.',
