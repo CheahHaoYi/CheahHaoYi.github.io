@@ -39,9 +39,10 @@ const breadcrumbs = [
 
     <!-- Projects Grid -->
     <section class="stack">
-      <div class="grid-responsive">
+      <div class="projects-grid">
         {projects.map((project) => (
           <Card
+            class="project-card"
             variant="glass"
             doubleBezel={project.featured}
             title={project.name}
@@ -49,7 +50,6 @@ const breadcrumbs = [
             badge={project.badge}
             badgeVariant={project.featured ? 'accent' : 'default'}
             date={project.date}
-            href={project.repoUrl || project.demoUrl || project.detailPath}
             tags={project.tags}
           >
             <div class="project-card-footer">
@@ -81,6 +81,47 @@ const breadcrumbs = [
 </Layout>
 
 <style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-3);
+    align-items: start;
+  }
+
+  .projects-grid :global(.project-card) {
+    align-self: start;
+    aspect-ratio: 1;
+    min-width: 0;
+  }
+
+  .projects-grid :global(.project-card .card__body) {
+    padding: var(--space-4);
+    gap: var(--space-2);
+  }
+
+  .projects-grid :global(.project-card .card__description) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .projects-grid :global(.project-card .card__tags) {
+    max-height: calc(var(--space-6) * 2);
+    overflow: hidden;
+  }
+
+  .projects-grid :global(.project-card .project-card-footer) {
+    margin-top: auto;
+    padding-top: var(--space-2);
+  }
+
+  @media (min-width: 900px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
   .page-title {
     font-size: var(--text-3xl);
     font-weight: var(--font-weight-extrabold);
